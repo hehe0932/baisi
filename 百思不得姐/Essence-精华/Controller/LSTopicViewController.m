@@ -13,6 +13,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "LSTopicCell.h"
+#import "LSCommentViewController.h"
 @interface LSTopicViewController ()
 /** 帖子数据 */
 @property (nonatomic,strong)NSMutableArray *topics;
@@ -182,4 +183,8 @@ static NSString * const topicCellID = @"topic";
     return topic.cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    LSCommentViewController *vc = [LSCommentViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end

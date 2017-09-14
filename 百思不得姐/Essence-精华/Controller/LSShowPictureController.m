@@ -30,14 +30,14 @@
 //    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
     
     //图片尺寸
-    CGFloat pictureW = kScreenW;
+    CGFloat pictureW = ScreenW;
     CGFloat pictureH = pictureW * self.topic.height/self.topic.width;
-    if (pictureH>kScreenH) {//图片显示高度超出一个屏幕,需要滚动查看
+    if (pictureH>ScreenH) {//图片显示高度超出一个屏幕,需要滚动查看
         imageView.frame = CGRectMake(0, 0, pictureW, pictureH);
         self.scrollView.contentSize = CGSizeMake(0, pictureH);
     }else{
         imageView.size = CGSizeMake(pictureW, pictureH);
-        imageView.centerY = kScreenH*0.5;
+        imageView.centerY = ScreenH*0.5;
     }
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
 }

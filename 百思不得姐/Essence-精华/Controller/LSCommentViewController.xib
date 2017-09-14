@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSCommentViewController">
+            <connections>
+                <outlet property="bottomSpace" destination="q4L-0r-Do6" id="f1e-79-Cvl"/>
+                <outlet property="tableView" destination="MOX-1d-k3C" id="2Tu-W8-6E3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gt3-Gr-aOu" userLabel="底部工具条">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment-bar-bg" translatesAutoresizingMaskIntoConstraints="NO" id="FP6-kG-RKI" userLabel="背景">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWH-9e-OII">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="dHB-jX-QVd"/>
+                                <constraint firstAttribute="height" constant="44" id="iDP-Te-n74"/>
+                            </constraints>
+                            <state key="normal" image="comment-bar-voice"/>
+                            <state key="highlighted" image="comment-bar-voice-click"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJp-e7-wQN">
+                            <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="ERf-Yv-U4x"/>
+                                <constraint firstAttribute="height" constant="44" id="Y0o-H7-N3C"/>
+                            </constraints>
+                            <state key="normal" image="comment-bar-keyboard"/>
+                            <state key="highlighted" image="comment-bar-keyboard-click"/>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="写评论" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sga-eY-jGB">
+                            <rect key="frame" x="49" y="5" width="277" height="34"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4za-Ed-ANx"/>
+                        <constraint firstAttribute="bottom" secondItem="sga-eY-jGB" secondAttribute="bottom" constant="5" id="CEc-9u-zim"/>
+                        <constraint firstItem="JWH-9e-OII" firstAttribute="top" secondItem="Gt3-Gr-aOu" secondAttribute="top" id="DdI-Y2-fyY"/>
+                        <constraint firstAttribute="trailing" secondItem="FP6-kG-RKI" secondAttribute="trailing" id="Gge-B7-cGG"/>
+                        <constraint firstItem="sJp-e7-wQN" firstAttribute="top" secondItem="Gt3-Gr-aOu" secondAttribute="top" id="U6d-Gb-57G"/>
+                        <constraint firstItem="sJp-e7-wQN" firstAttribute="leading" secondItem="sga-eY-jGB" secondAttribute="trailing" constant="5" id="b4n-zZ-PW3"/>
+                        <constraint firstItem="FP6-kG-RKI" firstAttribute="top" secondItem="Gt3-Gr-aOu" secondAttribute="top" id="bEq-zV-BbA"/>
+                        <constraint firstAttribute="trailing" secondItem="sJp-e7-wQN" secondAttribute="trailing" id="d0R-xR-Den"/>
+                        <constraint firstItem="sga-eY-jGB" firstAttribute="top" secondItem="Gt3-Gr-aOu" secondAttribute="top" constant="5" id="gtK-v9-wQG"/>
+                        <constraint firstAttribute="bottom" secondItem="FP6-kG-RKI" secondAttribute="bottom" id="hwI-B9-OrK"/>
+                        <constraint firstItem="FP6-kG-RKI" firstAttribute="leading" secondItem="Gt3-Gr-aOu" secondAttribute="leading" id="krN-CF-1PU"/>
+                        <constraint firstItem="JWH-9e-OII" firstAttribute="leading" secondItem="Gt3-Gr-aOu" secondAttribute="leading" id="ogU-yo-hRP"/>
+                        <constraint firstItem="sga-eY-jGB" firstAttribute="leading" secondItem="JWH-9e-OII" secondAttribute="trailing" constant="5" id="usl-7l-M3z"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOX-1d-k3C">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="MOX-1d-k3C" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4Sj-fQ-SUe"/>
+                <constraint firstAttribute="trailing" secondItem="Gt3-Gr-aOu" secondAttribute="trailing" id="8Rw-y2-qZL"/>
+                <constraint firstItem="Gt3-Gr-aOu" firstAttribute="top" secondItem="MOX-1d-k3C" secondAttribute="bottom" id="D3H-LL-dKo"/>
+                <constraint firstItem="MOX-1d-k3C" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FlX-if-Tqe"/>
+                <constraint firstItem="Gt3-Gr-aOu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Osg-iI-Tvq"/>
+                <constraint firstAttribute="trailing" secondItem="MOX-1d-k3C" secondAttribute="trailing" id="fVv-dB-MbQ"/>
+                <constraint firstAttribute="bottom" secondItem="Gt3-Gr-aOu" secondAttribute="bottom" id="q4L-0r-Do6"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="comment-bar-bg" width="320" height="49"/>
+        <image name="comment-bar-keyboard" width="27" height="27"/>
+        <image name="comment-bar-keyboard-click" width="27" height="27"/>
+        <image name="comment-bar-voice" width="29" height="29"/>
+        <image name="comment-bar-voice-click" width="29" height="29"/>
+    </resources>
+</document>

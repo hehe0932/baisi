@@ -28,9 +28,9 @@ static CGFloat const springFactor = 10;
     int maxCols = 3;
     CGFloat buttonW = 72;
     CGFloat buttonH = buttonW + 30;
-    CGFloat buttonStartY = (kScreenH-2*buttonH)*0.5;
+    CGFloat buttonStartY = (ScreenH-2*buttonH)*0.5;
     CGFloat buttonStratX = 20;
-    CGFloat xMargin = (kScreenW - 2*buttonStratX - maxCols * buttonW)/(maxCols - 1);
+    CGFloat xMargin = (ScreenW - 2*buttonStratX - maxCols * buttonW)/(maxCols - 1);
     for (int i = 0; i<images.count; i++) {
         LSVerticalButton *button = [[LSVerticalButton alloc]init];
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:(UIControlEventTouchUpInside)];
@@ -47,7 +47,7 @@ static CGFloat const springFactor = 10;
         int col = i % maxCols;
         CGFloat buttonX = buttonStratX + col * (buttonW + xMargin);
         CGFloat buttonEndY = buttonStartY + row * buttonH;
-        CGFloat buttonBeginY = -buttonEndY-kScreenH;
+        CGFloat buttonBeginY = -buttonEndY-ScreenH;
         
         //添加动画
         POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
@@ -64,9 +64,9 @@ static CGFloat const springFactor = 10;
 
     [self.view addSubview:sloganView];
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-    CGFloat centerX = kScreenW*0.5;
-    CGFloat centerEndY = kScreenH * 0.25;
-    CGFloat centerbeginY = centerEndY - kScreenH;
+    CGFloat centerX = ScreenW*0.5;
+    CGFloat centerEndY = ScreenH * 0.25;
+    CGFloat centerbeginY = centerEndY - ScreenH;
     
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerbeginY)] ;
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerEndY)];
@@ -87,7 +87,7 @@ static CGFloat const springFactor = 10;
     for (int i = beginIndex;i < self.view.subviews.count; i++) {
         UIView *subview = self.view.subviews[i];
         POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
-        CGFloat centerY = subview.centerY + kScreenH;
+        CGFloat centerY = subview.centerY + ScreenH;
         //动画执行的节奏(一开始很慢,后面加速)
         anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
         anim.toValue = [NSValue valueWithCGPoint:CGPointMake(subview.centerX, centerY)];

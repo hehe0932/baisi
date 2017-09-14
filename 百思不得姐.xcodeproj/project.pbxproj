@@ -18,6 +18,8 @@
 		4B58758B1E261E4E002D53DC /* LSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875711E261E4E002D53DC /* LSNewViewController.m */; };
 		4B58758C1E261E4E002D53DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875761E261E4E002D53DC /* AppDelegate.m */; };
 		4B5875931E261E4E002D53DC /* LSTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875861E261E4E002D53DC /* LSTrendsViewController.m */; };
+		4B5D49031F6ACB1F00CC1E41 /* LSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D49011F6ACB1F00CC1E41 /* LSCommentViewController.m */; };
+		4B5D49041F6ACB1F00CC1E41 /* LSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D49021F6ACB1F00CC1E41 /* LSCommentViewController.xib */; };
 		4B60E7621E387947007E66EF /* LSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B60E7611E387947007E66EF /* LSTopicPictureView.m */; };
 		4B60E7641E387988007E66EF /* LSTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B60E7631E387988007E66EF /* LSTopicPictureView.xib */; };
 		4B6170F91E347B6000FFEC88 /* LSTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6170F81E347B6000FFEC88 /* LSTopicViewController.m */; };
@@ -83,6 +85,9 @@
 		4B58757C1E261E4E002D53DC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4B5875851E261E4E002D53DC /* LSTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrendsViewController.h; sourceTree = "<group>"; };
 		4B5875861E261E4E002D53DC /* LSTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrendsViewController.m; sourceTree = "<group>"; };
+		4B5D49001F6ACB1F00CC1E41 /* LSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCommentViewController.h; sourceTree = "<group>"; };
+		4B5D49011F6ACB1F00CC1E41 /* LSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCommentViewController.m; sourceTree = "<group>"; };
+		4B5D49021F6ACB1F00CC1E41 /* LSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSCommentViewController.xib; sourceTree = "<group>"; };
 		4B60E7601E387947007E66EF /* LSTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTopicPictureView.h; sourceTree = "<group>"; };
 		4B60E7611E387947007E66EF /* LSTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTopicPictureView.m; sourceTree = "<group>"; };
 		4B60E7631E387988007E66EF /* LSTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSTopicPictureView.xib; sourceTree = "<group>"; };
@@ -231,6 +236,9 @@
 				4B1AE3F31E49AE6100EA4420 /* LSShowPictureController.h */,
 				4B1AE3F41E49AE6100EA4420 /* LSShowPictureController.m */,
 				4B1AE3F51E49AE6100EA4420 /* LSShowPictureController.xib */,
+				4B5D49001F6ACB1F00CC1E41 /* LSCommentViewController.h */,
+				4B5D49011F6ACB1F00CC1E41 /* LSCommentViewController.m */,
+				4B5D49021F6ACB1F00CC1E41 /* LSCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -531,6 +539,7 @@
 			files = (
 				4B3A69B51E4ABE0C001557F6 /* LSPublicViewController.xib in Resources */,
 				4B76605B1E2C8E3B0011686A /* LSRecommentTagCell.xib in Resources */,
+				4B5D49041F6ACB1F00CC1E41 /* LSCommentViewController.xib in Resources */,
 				4BFDD1171E276163005E016B /* LSReconmentCategoryCell.xib in Resources */,
 				4B6D09241E28C043005CCAB1 /* LSRecommentUserCell.xib in Resources */,
 				4B1AE3F71E49AE6100EA4420 /* LSShowPictureController.xib in Resources */,
@@ -570,13 +579,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-百思不得姐-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA85414FBBD20C1D6CF96EF3 /* [CP] Copy Pods Resources */ = {
@@ -585,9 +597,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -618,6 +634,7 @@
 				4B7660841E2CC23D0011686A /* LSLoginRegisterController.m in Sources */,
 				4B81E5DA1E31B100004CC8B4 /* LSTopic.m in Sources */,
 				4BFDD1041E274825005E016B /* LSRecommendController.m in Sources */,
+				4B5D49031F6ACB1F00CC1E41 /* LSCommentViewController.m in Sources */,
 				4B60E7621E387947007E66EF /* LSTopicPictureView.m in Sources */,
 				4B2CA2CC1E24BDF800F92116 /* main.m in Sources */,
 				4B7660521E2C70310011686A /* LSRecommendTag.m in Sources */,
