@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSRecommendController">
+            <connections>
+                <outlet property="categoryTableView" destination="6vv-nh-eu6" id="aMn-0E-vdm"/>
+                <outlet property="userTableView" destination="c4o-88-Iup" id="gp3-AW-DKs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6vv-nh-eu6" userLabel="左侧">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="tZH-w8-7Zb"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="tsb-U5-cRH"/>
+                        <outlet property="delegate" destination="-1" id="Gih-0a-5Tr"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-88-Iup" userLabel="右侧">
+                    <rect key="frame" x="80" y="0.0" width="295" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BIn-t3-mY4"/>
+                        <outlet property="delegate" destination="-1" id="sIh-za-772"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="c4o-88-Iup" firstAttribute="leading" secondItem="6vv-nh-eu6" secondAttribute="trailing" id="7kM-TE-vTu"/>
+                <constraint firstItem="c4o-88-Iup" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TXJ-8V-kJr"/>
+                <constraint firstAttribute="bottom" secondItem="c4o-88-Iup" secondAttribute="bottom" id="WWa-XQ-UTh"/>
+                <constraint firstAttribute="bottom" secondItem="6vv-nh-eu6" secondAttribute="bottom" id="bcb-nS-m7W"/>
+                <constraint firstAttribute="trailing" secondItem="c4o-88-Iup" secondAttribute="trailing" id="eUa-Pd-pf6"/>
+                <constraint firstItem="6vv-nh-eu6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rr3-hD-rAN"/>
+                <constraint firstItem="6vv-nh-eu6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tA8-hG-lg1"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
