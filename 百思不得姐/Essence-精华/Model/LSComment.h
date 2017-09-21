@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 @class LSUser;
 @interface LSComment : NSObject
+/** id*/
+@property (nonatomic,copy)NSString *ID;
 /** 音频文件的时长*/
 @property (nonatomic,assign)NSInteger voicetime;
+/** 音频文件的路径*/
+@property (nonatomic,copy)NSString *voiceurl;
 /** 评论的文字内容*/
 @property (nonatomic,copy)NSString *content;
 /** 被点赞数量*/

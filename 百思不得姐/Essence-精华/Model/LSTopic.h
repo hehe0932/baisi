@@ -7,8 +7,10 @@
 //  帖子
 
 #import <UIKit/UIKit.h>
-
+@class LSComment;
 @interface LSTopic : NSObject
+/** id*/
+@property (nonatomic,copy)NSString *ID;
 /** 名字*/
 @property (nonatomic,copy)NSString *name;
 /** 头像*/
@@ -47,8 +49,8 @@
 /** 视频时长*/
 @property (nonatomic,assign)NSInteger videotime;
 
-/** 最热评论(期望这个数组中存放的是LSComment模型)*/
-@property (nonatomic,strong)NSArray *top_cmt;
+/** 最热评论*/
+@property (nonatomic,strong)LSComment *top_cmt;
 /*********** 额外的辅助属性 ***********/
 /** cell的高度*/
 @property (nonatomic,assign,readonly)CGFloat cellHeight;

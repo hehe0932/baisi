@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		4B1AE3F61E49AE6100EA4420 /* LSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AE3F41E49AE6100EA4420 /* LSShowPictureController.m */; };
 		4B1AE3F71E49AE6100EA4420 /* LSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AE3F51E49AE6100EA4420 /* LSShowPictureController.xib */; };
+		4B263DEB1F7389820083A8EB /* LSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B263DEA1F7389820083A8EB /* LSCommentHeaderView.m */; };
 		4B2CA2CC1E24BDF800F92116 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B2CA2CB1E24BDF800F92116 /* main.m */; };
 		4B2CA2D71E24BDF800F92116 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2CA2D61E24BDF800F92116 /* Assets.xcassets */; };
 		4B3A69B41E4ABE0C001557F6 /* LSPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3A69B21E4ABE0C001557F6 /* LSPublicViewController.m */; };
 		4B3A69B51E4ABE0C001557F6 /* LSPublicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3A69B31E4ABE0C001557F6 /* LSPublicViewController.xib */; };
+		4B54DEC71F73F6C500F3FE41 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B54DEC61F73F6C500F3FE41 /* Launch Screen.storyboard */; };
 		4B5875891E261E4E002D53DC /* LSEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875651E261E4E002D53DC /* LSEssenceViewController.m */; };
 		4B58758A1E261E4E002D53DC /* LSMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B58756B1E261E4E002D53DC /* LSMeViewController.m */; };
 		4B58758B1E261E4E002D53DC /* LSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875711E261E4E002D53DC /* LSNewViewController.m */; };
@@ -43,6 +45,8 @@
 		4BBF8B701E2DF43500ACE999 /* LSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF8B6F1E2DF43500ACE999 /* LSTextField.m */; };
 		4BBF8B731E2E107400ACE999 /* LSPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBF8B721E2E107400ACE999 /* LSPushGuideView.m */; };
 		4BBF8B751E2E108D00ACE999 /* LSPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF8B741E2E108D00ACE999 /* LSPushGuideView.xib */; };
+		4BE515081F74008D00BD79A1 /* LSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE515061F74008D00BD79A1 /* LSCommentCell.m */; };
+		4BE515091F74008D00BD79A1 /* LSCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BE515071F74008D00BD79A1 /* LSCommentCell.xib */; };
 		4BF6FF391F3B4C1C00A7BE0B /* LSTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6FF381F3B4C1C00A7BE0B /* LSTopicVoiceView.m */; };
 		4BF6FF3B1F3B4C4600A7BE0B /* LSTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF6FF3A1F3B4C4600A7BE0B /* LSTopicVoiceView.xib */; };
 		4BF6FF3E1F3B60AD00A7BE0B /* LSTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF6FF3D1F3B60AD00A7BE0B /* LSTopicVideoView.m */; };
@@ -67,6 +71,8 @@
 		4B1AE3F31E49AE6100EA4420 /* LSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSShowPictureController.h; sourceTree = "<group>"; };
 		4B1AE3F41E49AE6100EA4420 /* LSShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSShowPictureController.m; sourceTree = "<group>"; };
 		4B1AE3F51E49AE6100EA4420 /* LSShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSShowPictureController.xib; sourceTree = "<group>"; };
+		4B263DE91F7389820083A8EB /* LSCommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCommentHeaderView.h; sourceTree = "<group>"; };
+		4B263DEA1F7389820083A8EB /* LSCommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCommentHeaderView.m; sourceTree = "<group>"; };
 		4B2CA2C71E24BDF800F92116 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B2CA2CB1E24BDF800F92116 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B2CA2D61E24BDF800F92116 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 		4B3A69B11E4ABE0C001557F6 /* LSPublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPublicViewController.h; sourceTree = "<group>"; };
 		4B3A69B21E4ABE0C001557F6 /* LSPublicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPublicViewController.m; sourceTree = "<group>"; };
 		4B3A69B31E4ABE0C001557F6 /* LSPublicViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSPublicViewController.xib; sourceTree = "<group>"; };
+		4B54DEC61F73F6C500F3FE41 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4B5875641E261E4E002D53DC /* LSEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSEssenceViewController.h; sourceTree = "<group>"; };
 		4B5875651E261E4E002D53DC /* LSEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSEssenceViewController.m; sourceTree = "<group>"; };
 		4B58756A1E261E4E002D53DC /* LSMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSMeViewController.h; sourceTree = "<group>"; };
@@ -128,6 +135,9 @@
 		4BBF8B711E2E107400ACE999 /* LSPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPushGuideView.h; sourceTree = "<group>"; };
 		4BBF8B721E2E107400ACE999 /* LSPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPushGuideView.m; sourceTree = "<group>"; };
 		4BBF8B741E2E108D00ACE999 /* LSPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSPushGuideView.xib; sourceTree = "<group>"; };
+		4BE515051F74008D00BD79A1 /* LSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCommentCell.h; sourceTree = "<group>"; };
+		4BE515061F74008D00BD79A1 /* LSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCommentCell.m; sourceTree = "<group>"; };
+		4BE515071F74008D00BD79A1 /* LSCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSCommentCell.xib; sourceTree = "<group>"; };
 		4BF6FF371F3B4C1C00A7BE0B /* LSTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTopicVoiceView.h; sourceTree = "<group>"; };
 		4BF6FF381F3B4C1C00A7BE0B /* LSTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTopicVoiceView.m; sourceTree = "<group>"; };
 		4BF6FF3A1F3B4C4600A7BE0B /* LSTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSTopicVoiceView.xib; sourceTree = "<group>"; };
@@ -201,6 +211,7 @@
 				4B5875741E261E4E002D53DC /* Other-其他 */,
 				4B2CA2DB1E24BDF800F92116 /* Info.plist */,
 				4B2CA2D61E24BDF800F92116 /* Assets.xcassets */,
+				4B54DEC61F73F6C500F3FE41 /* Launch Screen.storyboard */,
 				4B2CA2CA1E24BDF800F92116 /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -276,6 +287,11 @@
 				4BF6FF3C1F3B60AD00A7BE0B /* LSTopicVideoView.h */,
 				4BF6FF3D1F3B60AD00A7BE0B /* LSTopicVideoView.m */,
 				4BF6FF3F1F3B60ED00A7BE0B /* LSTopicVideoView.xib */,
+				4B263DE91F7389820083A8EB /* LSCommentHeaderView.h */,
+				4B263DEA1F7389820083A8EB /* LSCommentHeaderView.m */,
+				4BE515051F74008D00BD79A1 /* LSCommentCell.h */,
+				4BE515061F74008D00BD79A1 /* LSCommentCell.m */,
+				4BE515071F74008D00BD79A1 /* LSCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -539,6 +555,8 @@
 			files = (
 				4B3A69B51E4ABE0C001557F6 /* LSPublicViewController.xib in Resources */,
 				4B76605B1E2C8E3B0011686A /* LSRecommentTagCell.xib in Resources */,
+				4BE515091F74008D00BD79A1 /* LSCommentCell.xib in Resources */,
+				4B54DEC71F73F6C500F3FE41 /* Launch Screen.storyboard in Resources */,
 				4B5D49041F6ACB1F00CC1E41 /* LSCommentViewController.xib in Resources */,
 				4BFDD1171E276163005E016B /* LSReconmentCategoryCell.xib in Resources */,
 				4B6D09241E28C043005CCAB1 /* LSRecommentUserCell.xib in Resources */,
@@ -640,6 +658,7 @@
 				4B7660521E2C70310011686A /* LSRecommendTag.m in Sources */,
 				4BF6FF3E1F3B60AD00A7BE0B /* LSTopicVideoView.m in Sources */,
 				4B81E5E11E31DFBE004CC8B4 /* LSTopicCell.m in Sources */,
+				4B263DEB1F7389820083A8EB /* LSCommentHeaderView.m in Sources */,
 				4B1AE3F61E49AE6100EA4420 /* LSShowPictureController.m in Sources */,
 				4BFDD0F91E271552005E016B /* UIView+LSExtension.m in Sources */,
 				4BFDD10D1E275DED005E016B /* LSRecommendCagetory.m in Sources */,
@@ -652,6 +671,7 @@
 				4BBF8B6A1E2DC5B900ACE999 /* LSVerticalButton.m in Sources */,
 				4B81E5E51E31FEC1004CC8B4 /* NSDate+LSExtension.m in Sources */,
 				4B5875931E261E4E002D53DC /* LSTrendsViewController.m in Sources */,
+				4BE515081F74008D00BD79A1 /* LSCommentCell.m in Sources */,
 				4BB42A1D1F3C9FBF00EBABDD /* LSComment.m in Sources */,
 				4B6D09271E28C34B005CCAB1 /* LSRecommentUser.m in Sources */,
 				4B58758C1E261E4E002D53DC /* AppDelegate.m in Sources */,
@@ -754,13 +774,16 @@
 			baseConfigurationReference = C5BFAC70E72708E24AD4B1DF /* Pods-百思不得姐.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW7TW2FYE8;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = baisibudejie;
+				PRODUCT_BUNDLE_IDENTIFIER = baisibudejiehehe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -769,13 +792,16 @@
 			baseConfigurationReference = 4D35DF4986B8FB269773B2F7 /* Pods-百思不得姐.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HW7TW2FYE8;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/百思不得姐/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = baisibudejie;
+				PRODUCT_BUNDLE_IDENTIFIER = baisibudejiehehe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

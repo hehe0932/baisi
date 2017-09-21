@@ -11,4 +11,6 @@
 @interface LSTopicCell : UITableViewCell
 /** 帖子数据模型 */
 @property (nonatomic,strong)LSTopic *topic;
+
++ (instancetype)cell;
 @end

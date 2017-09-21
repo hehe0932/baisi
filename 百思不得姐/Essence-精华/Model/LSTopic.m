@@ -22,13 +22,12 @@
              @"small_image":@"image0",
              @"large_image":@"image1",
              @"middle_image":@"image2",
+             @"ID":@"id",
+             @"top_cmt":@"top_cmt[0]"
              };
 }
 
-+ (NSDictionary *)mj_objectClassInArray{
-//    return @{@"top_cmt":[LSComment class]};
-    return @{@"top_cmt":@"LSComment"};
-}
+
 - (NSString *)create_time{
     //日期格式化类
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -100,9 +99,8 @@
             _cellHeight += videoH + topicCellMargin;
         }
         //如果有最热评论
-        LSComment *cmt = [self.top_cmt firstObject];
-        if (cmt) {
-            NSString *content = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+        if (self.top_cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@",self.top_cmt.user.username,self.top_cmt.content];
             CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
             _cellHeight += LSTopicCellTopCmtTitleH + contentH +topicCellMargin;
         }

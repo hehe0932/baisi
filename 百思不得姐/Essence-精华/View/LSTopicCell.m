@@ -46,7 +46,9 @@
 
 @end
 @implementation LSTopicCell
-
++ (instancetype)cell{
+    return [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
+}
 - (LSTopicPictureView *)pictureView{
     if (!_pictureView) {
         LSTopicPictureView *pictureView = [LSTopicPictureView pictureView];
@@ -126,9 +128,8 @@
         
     }
     //处理最热评论
-    LSComment *cmt = [topic.top_cmt firstObject];
-    if (cmt) {
-        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",cmt.user.username,cmt.content];
+    if (topic.top_cmt) {
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@",topic.top_cmt.user.username,topic.top_cmt.content];
         self.topCmtView.hidden = NO;
     }else{
         self.topCmtView.hidden = YES;
@@ -151,7 +152,8 @@
 //    static CGFloat margin = 10;//static只触发一次
     frame.origin.x =topicCellMargin;
     frame.size.width-=2*frame.origin.x;
-    frame.size.height -=topicCellMargin;
+//    frame.size.height -=topicCellMargin;
+    frame.size.height = self.topic.cellHeight - topicCellMargin;
     frame.origin.y+=topicCellMargin;
     [super setFrame:frame];
 }
@@ -207,4 +209,25 @@
 //    
 //    
 //}
+- (IBAction)more:(id)sender {
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+   UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    
+    [alertVC addAction:action];
+    [alertVC addAction:action2];
+    [alertVC addAction:action3];
+    [self.window.rootViewController presentViewController:alertVC animated:YES completion:nil];
+}
+
+
 @end

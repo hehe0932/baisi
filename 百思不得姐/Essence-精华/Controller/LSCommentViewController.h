@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class LSTopic;
 @interface LSCommentViewController : UIViewController
-
+/** 帖子模型*/
+@property (nonatomic,strong)LSTopic *topic;
 @end
