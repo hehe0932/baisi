@@ -22,6 +22,7 @@
         UILabel *label = [[UILabel alloc]init];
         label.textColor = LSRGBColor(67, 67, 67);
         label.width = 200;
+        label.font = [UIFont systemFontOfSize:14];
         label.x = topicCellMargin;
 //        label.tag = LSHeaderLabelTag;
         label.autoresizingMask = UIViewAutoresizingFlexibleHeight;

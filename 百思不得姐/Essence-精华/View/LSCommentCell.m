@@ -37,8 +37,8 @@
     }
 }
 - (void)setFrame:(CGRect)frame{
-    frame.origin.x = topicCellMargin;
-    frame.size.width -= 2*topicCellMargin;
+//    frame.origin.x = topicCellMargin;
+//    frame.size.width -= 2*topicCellMargin;
     [super setFrame:frame];
 }
 - (void)awakeFromNib {
@@ -47,4 +47,12 @@
     self.backgroundView = bgView;
 }
 
+
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender{
+    return NO;
+}
 @end

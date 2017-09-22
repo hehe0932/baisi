@@ -150,9 +150,8 @@
 }
 - (void)setFrame:(CGRect)frame{
 //    static CGFloat margin = 10;//static只触发一次
-    frame.origin.x =topicCellMargin;
-    frame.size.width-=2*frame.origin.x;
-//    frame.size.height -=topicCellMargin;
+//    frame.origin.x =topicCellMargin;
+//    frame.size.width-=2*frame.origin.x;
     frame.size.height = self.topic.cellHeight - topicCellMargin;
     frame.origin.y+=topicCellMargin;
     [super setFrame:frame];

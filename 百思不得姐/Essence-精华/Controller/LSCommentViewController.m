@@ -31,6 +31,7 @@ static NSString *const LSCommentID = @"comment";
 @property (nonatomic,assign)NSInteger page;
 /** 管理者*/
 @property (nonatomic,strong)AFHTTPSessionManager *manager;
+
 @end
 
 @implementation LSCommentViewController
@@ -77,6 +78,13 @@ static NSString *const LSCommentID = @"comment";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //        NSLog(@"~~%@",responseObject);
+        //如果服务器返回的数据不是一个字典,直接返回(解决空评论导致的报错)
+        if(![responseObject isKindOfClass:[NSDictionary class]])
+        {
+            self.tableView.mj_header.hidden = YES;
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            return;
+        }
         //最新评论
         NSArray *newComments = [LSComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latesComments addObjectsFromArray:newComments];
@@ -112,6 +120,7 @@ static NSString *const LSCommentID = @"comment";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"~~%@",responseObject);
+
         self.page = 1;
         //最热评论
         self.hotComments = [LSComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
@@ -210,8 +219,9 @@ static NSString *const LSCommentID = @"comment";
 #pragma mark - UITableViewDelegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+
     [self.view endEditing:YES];
-    
+    [[UIMenuController sharedMenuController]setMenuVisible:NO animated:NO];
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     NSInteger hotCount = self.hotComments.count;
@@ -243,7 +253,29 @@ static NSString *const LSCommentID = @"comment";
     cell.comment = comment;
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //被点击的cell
+    LSCommentCell *cell = (LSCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+    //出现第一响应者
+    [cell becomeFirstResponder];
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+        
+    }else{
+        
+        CGRect rect = CGRectMake(0, cell.height *0.5, cell.width, cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+        
+        UIMenuItem *dingItem = [[UIMenuItem alloc]initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *replayItem = [[UIMenuItem alloc]initWithTitle:@"回复" action:@selector(replay:)];
+        UIMenuItem *reportItem = [[UIMenuItem alloc]initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[dingItem,replayItem,reportItem];
+    }
+}
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 //    NSInteger hotCount = self.hotComments.count;
 //    if (section == 0) {
@@ -296,4 +328,25 @@ static NSString *const LSCommentID = @"comment";
     }
     return header;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 20;
+}
+#pragma mark - MenuController的处理
+
+
+- (void)ding:(UIMenuController *)sender{
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    NSLog(@"%zd - %zd",indexPath.section ,indexPath.row);
+}
+
+- (void)replay:(UIMenuController *)sender{
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    NSLog(@"%zd - %zd",indexPath.section ,indexPath.row);
+}
+- (void)report:(UIMenuController *)sender{
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    NSLog(@"%zd - %zd",indexPath.section ,indexPath.row);
+}
+
 @end
