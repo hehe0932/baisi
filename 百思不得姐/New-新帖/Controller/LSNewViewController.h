@@ -6,8 +6,8 @@
 //  Copyright © 2017年 chenlishuang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LSEssenceViewController.h"
 
-@interface LSNewViewController : UIViewController
+@interface LSNewViewController : LSEssenceViewController
 
 @end

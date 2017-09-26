@@ -15,7 +15,6 @@
 #import "LSTabBar.h"
 #import "LSNavigationController.h"
 @interface LSRootController ()
-
 @end
 
 @implementation LSRootController
@@ -43,7 +42,7 @@
     //关注
     [self setupChildViewController:[[LSTrendsViewController alloc]init] title:@"关注" imageName:@"tabBar_friendTrends_icon"];
     //我
-    [self setupChildViewController:[[LSMeViewController alloc]init] title:@"我" imageName:@"tabBar_me_icon"];
+    [self setupChildViewController:[[LSMeViewController alloc]initWithStyle:UITableViewStyleGrouped] title:@"我" imageName:@"tabBar_me_icon"];
     
    //更换tabbar
     //self.tabBar = [[LSTabBar alloc]init];//不可以
@@ -69,14 +68,4 @@
     
     [self addChildViewController:nv];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

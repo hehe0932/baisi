@@ -24,7 +24,8 @@
 
 - (void)setComment:(LSComment *)comment{
     _comment = comment;
-    [self.prefileImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.prefileImageView setCircleHeader:comment.user.profile_image];
     self.sexImageView.image = [comment.user.sex isEqualToString:LSUserSexMale]?[UIImage imageNamed:@"Profile_manIcon"]:[UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = comment.content;
     self.userNameLabel.text = comment.user.username;

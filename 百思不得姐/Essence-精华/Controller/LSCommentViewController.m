@@ -120,7 +120,13 @@ static NSString *const LSCommentID = @"comment";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        NSLog(@"~~%@",responseObject);
-
+        //如果服务器返回的数据不是一个字典,直接返回(解决空评论导致的报错)
+        if(![responseObject isKindOfClass:[NSDictionary class]])
+        {
+            self.tableView.mj_header.hidden = YES;
+            [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            return;
+        }
         self.page = 1;
         //最热评论
         self.hotComments = [LSComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];

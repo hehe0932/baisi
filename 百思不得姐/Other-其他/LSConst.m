@@ -21,3 +21,12 @@ NSString * const LSUserSexMale = @"m";
 NSString * const LSUserSexFemale = @"f";
 /** 精华-cell-最热评论标题的高度*/
 CGFloat const LSTopicCellTopCmtTitleH = 20;
+
+/** tabbar被点击的通知的名字 */
+ NSString * const LSTabBarDidSelectNotification = @"LSTabBarDidSelectNotification";
+/** tabbar被点击的控制器的index */
+ NSString * const LSSelectControllerIndexKey = @"LSSelectControllerIndexKey";
+/** tabbar被点击的控制器的key */
+ NSString * const LSSelectControllerKey = @"LSSelectControllerKey";
+
+

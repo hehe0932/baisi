@@ -20,6 +20,8 @@
     self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(tagButtonAction)];
     self.view.backgroundColor = LSGlobaBg;
+    
+    
 }
 
 - (void)tagButtonAction {

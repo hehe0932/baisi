@@ -11,4 +11,5 @@ target '百思不得姐' do
   pod 'MJExtension'
   pod 'DACircularProgress'
   pod 'pop'
+  pod 'NJKWebViewProgress'
 end

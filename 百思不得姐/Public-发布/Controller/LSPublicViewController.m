@@ -9,6 +9,7 @@
 #import "LSPublicViewController.h"
 #import "LSVerticalButton.h"
 #import <POP.h>
+#import "LSPostWordViewController.h"
 static CGFloat const animationDelay = 0.1;
 static CGFloat const springFactor = 10;
 @interface LSPublicViewController ()
@@ -41,6 +42,7 @@ static CGFloat const springFactor = 10;
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
+        button.tag = i;
         button.size = CGSizeMake(buttonW, buttonH);
         //计算X Y
         int row = i / maxCols;
@@ -65,7 +67,7 @@ static CGFloat const springFactor = 10;
     [self.view addSubview:sloganView];
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
     CGFloat centerX = ScreenW*0.5;
-    CGFloat centerEndY = ScreenH * 0.25;
+    CGFloat centerEndY = ScreenH * 0.2;
     CGFloat centerbeginY = centerEndY - ScreenH;
     
     anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(centerX, centerbeginY)] ;
@@ -81,28 +83,8 @@ static CGFloat const springFactor = 10;
     
 }
 - (IBAction)cancel:(id)sender {
-    //让控制器的View不能被点击
-    self.view.userInteractionEnabled = NO;
-    int beginIndex = 2;
-    for (int i = beginIndex;i < self.view.subviews.count; i++) {
-        UIView *subview = self.view.subviews[i];
-        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
-        CGFloat centerY = subview.centerY + ScreenH;
-        //动画执行的节奏(一开始很慢,后面加速)
-        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-        anim.toValue = [NSValue valueWithCGPoint:CGPointMake(subview.centerX, centerY)];
-        
-        anim.beginTime = CACurrentMediaTime()+(i-beginIndex)*animationDelay;
-        [subview pop_addAnimation:anim forKey:nil];
-        //监听最后一个动画
-        if (i==self.view.subviews.count-1) {
-            [anim setCompletionBlock:^(POPAnimation *animation, BOOL finish) {
-                [self dismissViewControllerAnimated:NO completion:nil];
-            }];
-        }
-    }
     
-
+    [self cancelWithCompletionBlock:nil];
 }
 
 
@@ -125,6 +107,41 @@ static CGFloat const springFactor = 10;
 //    [self.sloganView pop_addAnimation:animation forKey:@"123"];
 }
 - (void)buttonClick:(UIButton *)button{
-    [self cancel:nil];
+    
+    [self cancelWithCompletionBlock:^{
+        if (button.tag == 2) {
+            LSPostWordViewController *postWord = [[LSPostWordViewController alloc]init];
+            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:postWord];
+            [self presentViewController:nav animated:YES completion:nil];
+            NSLog(@"发段子");
+        }
+    }];
+}
+
+- (void)cancelWithCompletionBlock:(void(^)())block{
+    //让控制器的View不能被点击
+    self.view.userInteractionEnabled = NO;
+    int beginIndex = 2;
+    for (int i = beginIndex;i < self.view.subviews.count; i++) {
+        UIView *subview = self.view.subviews[i];
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
+        CGFloat centerY = subview.centerY + ScreenH;
+        //动画执行的节奏(一开始很慢,后面加速)
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        anim.toValue = [NSValue valueWithCGPoint:CGPointMake(subview.centerX, centerY)];
+        
+        anim.beginTime = CACurrentMediaTime()+(i-beginIndex)*animationDelay;
+        [subview pop_addAnimation:anim forKey:nil];
+        //监听最后一个动画
+        if (i==self.view.subviews.count-1) {
+            [anim setCompletionBlock:^(POPAnimation *animation, BOOL finish) {
+                
+                !block?:block();
+                
+                [self dismissViewControllerAnimated:NO completion:nil];
+            }];
+        }
+    }
+
 }
 @end

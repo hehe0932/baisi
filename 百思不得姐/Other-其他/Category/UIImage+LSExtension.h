@@ -11,4 +11,9 @@
 @interface UIImage (LSExtension)
 + (UIImage *)originalImageName:(NSString *)name NS_DEPRECATED_IOS(2_0, 3_0,"过期了~~~用ls_方法") __TVOS_PROHIBITED;
 + (UIImage *)ls_originalImageName:(NSString *)name;
+
+/**
+ 圆形图片
+ */
+- (UIImage *)circleImage;
 @end

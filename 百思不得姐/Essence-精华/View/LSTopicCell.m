@@ -77,6 +77,9 @@
     [super awakeFromNib];
     UIImageView *bgView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
     self.backgroundView = bgView;
+
+//    self.pofileImageView.layer.cornerRadius = self.pofileImageView.width * 0.5;
+//    self.pofileImageView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -86,7 +89,8 @@
 }
 - (void)setTopic:(LSTopic *)topic{
     _topic = topic;
-    [self.pofileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    [self.pofileImageView setCircleHeader:topic.profile_image];
     self.nameLabel.text = topic.name;
     //设置帖子的创建时间  设置在get方法里了
     self.creatTimeLabel.text = topic.create_time;

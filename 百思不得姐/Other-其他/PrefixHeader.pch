@@ -12,7 +12,8 @@
 #import "UIBarButtonItem+LSExtension.h"
 #import "LSConst.h"
 #import "NSDate+LSExtension.h"
-
+#import "UIImage+LSExtension.h"
+#import "UIImageView+LSExtension.h"
 #ifdef DEBUG
 #define LSLog(...) NSLog(__VA_ARGS__)
 #else
@@ -25,5 +26,6 @@
 
 #define ScreenH [UIScreen mainScreen].bounds.size.height
 #define ScreenW [UIScreen mainScreen].bounds.size.width
+#define LSNoteCenter [NSNotificationCenter defaultCenter]
 
 #endif /* PrefixHeader_pch */

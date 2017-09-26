@@ -14,6 +14,7 @@
 #import <MJRefresh.h>
 #import "LSTopicCell.h"
 #import "LSCommentViewController.h"
+#import "LSNewViewController.h"
 @interface LSTopicViewController ()
 /** 帖子数据 */
 @property (nonatomic,strong)NSMutableArray *topics;
@@ -23,6 +24,9 @@
 @property (nonatomic,copy)NSString *maxtime;
 /** 上一次请求的参数 */
 @property (nonatomic,strong)NSDictionary *params;
+
+/** 上次选中的索引*/
+@property (nonatomic,assign)NSInteger lastSelectIndex;
 @end
 
 @implementation LSTopicViewController
@@ -55,6 +59,22 @@ static NSString * const topicCellID = @"topic";
     self.tableView.backgroundColor = [UIColor clearColor];
     //注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LSTopicCell class]) bundle:nil] forCellReuseIdentifier:topicCellID];
+    
+    //监听tabbar点击的通知
+    [LSNoteCenter addObserver:self selector:@selector(tabbarSelect) name:LSTabBarDidSelectNotification object:nil];
+}
+
+- (void)tabbarSelect{
+    
+    //如果选中的不是当前的导航控制器,直接返回
+    //如果不是连续选中2次,直接返回
+    if (self.lastSelectIndex == self.tabBarController.selectedIndex &&
+//        self.tabBarController.selectedViewController == self.navigationController &&
+        self.view.isShowingOnWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    //记住这一次选中的索引
+    self.lastSelectIndex = self.tabBarController.selectedIndex;
 }
 /**
  添加刷新控件
@@ -67,7 +87,10 @@ static NSString * const topicCellID = @"topic";
     
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopics)];
 }
-
+#pragma mark - a参数
+- (NSString *)a{
+    return  [self.parentViewController isKindOfClass:[LSNewViewController class]] ? @"newlist":@"list";
+}
 
 #pragma mark - 数据处理
 /**
@@ -79,7 +102,7 @@ static NSString * const topicCellID = @"topic";
     [self.tableView.mj_footer endRefreshing];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.topicType);
     self.params = params;
@@ -120,7 +143,7 @@ static NSString * const topicCellID = @"topic";
     [self.tableView.mj_header endRefreshing];
     self.page++;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.topicType);
     params[@"page"] = @(self.page);
