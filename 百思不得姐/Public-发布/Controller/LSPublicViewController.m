@@ -10,6 +10,7 @@
 #import "LSVerticalButton.h"
 #import <POP.h>
 #import "LSPostWordViewController.h"
+#import "LSNavigationController.h"
 static CGFloat const animationDelay = 0.1;
 static CGFloat const springFactor = 10;
 @interface LSPublicViewController ()
@@ -111,8 +112,10 @@ static CGFloat const springFactor = 10;
     [self cancelWithCompletionBlock:^{
         if (button.tag == 2) {
             LSPostWordViewController *postWord = [[LSPostWordViewController alloc]init];
-            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:postWord];
-            [self presentViewController:nav animated:YES completion:nil];
+            LSNavigationController *nav = [[LSNavigationController alloc]initWithRootViewController:postWord];
+            //这里不能使用时self来弹出控制器 因为self执行了dismiss操作
+            UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+            [rootVC presentViewController:nav animated:YES completion:nil];
             NSLog(@"发段子");
         }
     }];
@@ -136,9 +139,9 @@ static CGFloat const springFactor = 10;
         if (i==self.view.subviews.count-1) {
             [anim setCompletionBlock:^(POPAnimation *animation, BOOL finish) {
                 
-                !block?:block();
-                
                 [self dismissViewControllerAnimated:NO completion:nil];
+                
+                !block?:block();
             }];
         }
     }

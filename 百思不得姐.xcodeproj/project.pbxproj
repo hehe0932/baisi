@@ -30,6 +30,7 @@
 		4B6D09231E28C043005CCAB1 /* LSRecommentUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6D09211E28C043005CCAB1 /* LSRecommentUserCell.m */; };
 		4B6D09241E28C043005CCAB1 /* LSRecommentUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B6D09221E28C043005CCAB1 /* LSRecommentUserCell.xib */; };
 		4B6D09271E28C34B005CCAB1 /* LSRecommentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6D09261E28C34B005CCAB1 /* LSRecommentUser.m */; };
+		4B6F84C81F7AA7BC00E37CDD /* LSPlacehoderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6F84C71F7AA7BC00E37CDD /* LSPlacehoderTextView.m */; };
 		4B76604F1E2C6E8A0011686A /* LSRecommentTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B76604E1E2C6E8A0011686A /* LSRecommentTagsViewController.m */; };
 		4B7660521E2C70310011686A /* LSRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7660511E2C70310011686A /* LSRecommendTag.m */; };
 		4B76605A1E2C8E3B0011686A /* LSRecommentTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7660581E2C8E3B0011686A /* LSRecommentTagCell.m */; };
@@ -117,6 +118,8 @@
 		4B6D09221E28C043005CCAB1 /* LSRecommentUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSRecommentUserCell.xib; sourceTree = "<group>"; };
 		4B6D09251E28C34B005CCAB1 /* LSRecommentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSRecommentUser.h; sourceTree = "<group>"; };
 		4B6D09261E28C34B005CCAB1 /* LSRecommentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSRecommentUser.m; sourceTree = "<group>"; };
+		4B6F84C61F7AA7BC00E37CDD /* LSPlacehoderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPlacehoderTextView.h; sourceTree = "<group>"; };
+		4B6F84C71F7AA7BC00E37CDD /* LSPlacehoderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSPlacehoderTextView.m; sourceTree = "<group>"; };
 		4B76604D1E2C6E8A0011686A /* LSRecommentTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSRecommentTagsViewController.h; sourceTree = "<group>"; };
 		4B76604E1E2C6E8A0011686A /* LSRecommentTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSRecommentTagsViewController.m; sourceTree = "<group>"; };
 		4B7660501E2C70310011686A /* LSRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSRecommendTag.h; sourceTree = "<group>"; };
@@ -238,6 +241,8 @@
 		4B27F7441F7A3ED9002FD1BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B6F84C61F7AA7BC00E37CDD /* LSPlacehoderTextView.h */,
+				4B6F84C71F7AA7BC00E37CDD /* LSPlacehoderTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -729,6 +734,7 @@
 				4BFDD0FE1E27253F005E016B /* LSNavigationController.m in Sources */,
 				4B7660841E2CC23D0011686A /* LSLoginRegisterController.m in Sources */,
 				4B81E5DA1E31B100004CC8B4 /* LSTopic.m in Sources */,
+				4B6F84C81F7AA7BC00E37CDD /* LSPlacehoderTextView.m in Sources */,
 				4BFDD1041E274825005E016B /* LSRecommendController.m in Sources */,
 				4B5D49031F6ACB1F00CC1E41 /* LSCommentViewController.m in Sources */,
 				4B60E7621E387947007E66EF /* LSTopicPictureView.m in Sources */,

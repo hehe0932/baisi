@@ -22,6 +22,20 @@
     
     UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    [bar setTitleTextAttributes:@{NSFontAttributeName : [UIFont boldSystemFontOfSize:20]}];
+    
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    //normal状态
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    attributes[NSForegroundColorAttributeName] = [UIColor blackColor];
+    attributes[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    [item setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    //disable状态
+    NSMutableDictionary *disabelAttributes = [NSMutableDictionary dictionary];
+    disabelAttributes[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
+    disabelAttributes[NSFontAttributeName] = [UIFont systemFontOfSize:17];
+    [item setTitleTextAttributes:disabelAttributes forState:UIControlStateDisabled];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
