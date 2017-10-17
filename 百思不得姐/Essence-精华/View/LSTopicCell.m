@@ -46,12 +46,10 @@
 
 @end
 @implementation LSTopicCell
-+ (instancetype)cell{
-    return [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil].lastObject;
-}
+
 - (LSTopicPictureView *)pictureView{
     if (!_pictureView) {
-        LSTopicPictureView *pictureView = [LSTopicPictureView pictureView];
+        LSTopicPictureView *pictureView = [LSTopicPictureView viewFromXib];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -59,7 +57,7 @@
 }
 - (LSTopicVoiceView *)voiceView{
     if (!_voiceView) {
-        LSTopicVoiceView *voiceView = [LSTopicVoiceView voiceView];
+        LSTopicVoiceView *voiceView = [LSTopicVoiceView viewFromXib];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
@@ -67,7 +65,7 @@
 }
 - (LSTopicVideoView *)videoView{
     if (!_videoView) {
-        LSTopicVideoView *videoView = [LSTopicVideoView videoView];
+        LSTopicVideoView *videoView = [LSTopicVideoView viewFromXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }

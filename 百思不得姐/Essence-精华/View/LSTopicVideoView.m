@@ -18,9 +18,7 @@
 @end
 @implementation LSTopicVideoView
 
-+ (instancetype)videoView{
-    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]lastObject];
-}
+
 - (void)awakeFromNib{
     [super awakeFromNib];
     self.autoresizingMask = UIViewAutoresizingNone;//给图片添加监听器

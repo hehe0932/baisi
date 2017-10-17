@@ -31,4 +31,6 @@
  *  判断控件是否真正的显示在屏幕上
  */
 -(BOOL)isShowingOnWindow;
+
++ (instancetype)viewFromXib;
 @end

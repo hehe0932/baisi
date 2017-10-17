@@ -10,6 +10,10 @@
 
 @implementation UIView (LSExtension)
 
++ (instancetype)viewFromXib{
+    return [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:self options:nil].lastObject;
+}
+
 -(BOOL)isShowingOnWindow
 {
     //主窗口

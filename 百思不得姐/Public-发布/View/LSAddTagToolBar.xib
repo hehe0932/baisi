@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LSAddTagToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="68"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DxK-SK-9Lu" userLabel="顶部">
+                    <rect key="frame" x="0.0" y="0.0" width="384" height="33"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWM-V9-3eS" userLabel="底部">
+                    <rect key="frame" x="0.0" y="33" width="384" height="35"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlightedImage="post-tag-bg" translatesAutoresizingMaskIntoConstraints="NO" id="94z-h2-ULo">
+                            <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwv-ch-ukx">
+                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Fa8-7O-XuS"/>
+                            </constraints>
+                            <state key="normal" image="post-@"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-i1-NiT">
+                            <rect key="frame" x="35" y="0.0" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="yh4-aO-jZx"/>
+                            </constraints>
+                            <state key="normal" image="post-#"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="qwv-ch-ukx" firstAttribute="top" secondItem="iWM-V9-3eS" secondAttribute="top" id="FBS-RA-ULR"/>
+                        <constraint firstItem="94z-h2-ULo" firstAttribute="top" secondItem="iWM-V9-3eS" secondAttribute="top" id="FfZ-Cf-HIQ"/>
+                        <constraint firstAttribute="bottom" secondItem="A5M-i1-NiT" secondAttribute="bottom" id="IOs-nE-Dac"/>
+                        <constraint firstItem="94z-h2-ULo" firstAttribute="leading" secondItem="iWM-V9-3eS" secondAttribute="leading" id="JH3-mF-WfU"/>
+                        <constraint firstItem="A5M-i1-NiT" firstAttribute="top" secondItem="iWM-V9-3eS" secondAttribute="top" id="Orp-4y-kaY"/>
+                        <constraint firstAttribute="bottom" secondItem="94z-h2-ULo" secondAttribute="bottom" id="QNe-Ar-whN"/>
+                        <constraint firstAttribute="bottom" secondItem="qwv-ch-ukx" secondAttribute="bottom" id="UgT-Qp-ywO"/>
+                        <constraint firstAttribute="trailing" secondItem="94z-h2-ULo" secondAttribute="trailing" id="W3P-SK-12E"/>
+                        <constraint firstItem="qwv-ch-ukx" firstAttribute="leading" secondItem="iWM-V9-3eS" secondAttribute="leading" id="d7b-uB-yUV"/>
+                        <constraint firstAttribute="height" constant="35" id="gdv-3d-Rip"/>
+                        <constraint firstItem="A5M-i1-NiT" firstAttribute="leading" secondItem="qwv-ch-ukx" secondAttribute="trailing" id="t6r-Cu-Sbh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iWM-V9-3eS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0eo-t6-PXD"/>
+                <constraint firstItem="DxK-SK-9Lu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6uL-IX-gSv"/>
+                <constraint firstAttribute="bottom" secondItem="iWM-V9-3eS" secondAttribute="bottom" id="Ef0-4m-uHP"/>
+                <constraint firstAttribute="trailing" secondItem="iWM-V9-3eS" secondAttribute="trailing" id="F6w-GF-NIf"/>
+                <constraint firstItem="DxK-SK-9Lu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SBw-DT-pQu"/>
+                <constraint firstItem="iWM-V9-3eS" firstAttribute="top" secondItem="DxK-SK-9Lu" secondAttribute="bottom" id="bbM-C2-p8g"/>
+                <constraint firstAttribute="trailing" secondItem="DxK-SK-9Lu" secondAttribute="trailing" id="kvY-qO-fth"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="topView" destination="DxK-SK-9Lu" id="r1q-B5-qdd"/>
+            </connections>
+            <point key="canvasLocation" x="53" y="-191"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="post-#" width="19" height="19"/>
+        <image name="post-@" width="19" height="19"/>
+        <image name="post-tag-bg" width="65" height="30"/>
+    </resources>
+</document>

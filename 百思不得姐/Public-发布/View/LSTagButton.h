@@ -1,14 +1,13 @@
 //
-//  LSPushGuideView.h
+//  LSTagButton.h
 //  百思不得姐
 //
-//  Created by chenlishuang on 17/1/17.
+//  Created by chenlishuang on 2017/10/17.
 //  Copyright © 2017年 chenlishuang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LSPushGuideView : UIView
+@interface LSTagButton : UIButton
 
-+ (void)show;
 @end

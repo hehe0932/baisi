@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class LSTopic;
 @interface LSTopicPictureView : UIView
-+ (instancetype)pictureView;
+
 /** 帖子数据*/
 @property (nonatomic,strong)LSTopic *topic;
 @end

@@ -25,9 +25,7 @@
 @end
 @implementation LSTopicPictureView
 
-+ (instancetype)pictureView{
-    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil]firstObject];
-}
+
 - (void)awakeFromNib{
     [super awakeFromNib];
     //默认拉伸了

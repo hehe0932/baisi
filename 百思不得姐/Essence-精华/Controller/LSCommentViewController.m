@@ -155,7 +155,7 @@ static NSString *const LSCommentID = @"comment";
         [self.topic setValue:@0 forKey:@"cellHeight"];
     }
     
-    LSTopicCell *cell = [LSTopicCell cell];
+    LSTopicCell *cell = [LSTopicCell viewFromXib];
     cell.topic = self.topic;
     cell.height = self.topic.cellHeight;
     [header addSubview:cell];

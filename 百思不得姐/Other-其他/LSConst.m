@@ -29,4 +29,6 @@ CGFloat const LSTopicCellTopCmtTitleH = 20;
 /** tabbar被点击的控制器的key */
  NSString * const LSSelectControllerKey = @"LSSelectControllerKey";
 
+/** 标签-间距*/
+ CGFloat const LSTagMargin = 5;
 

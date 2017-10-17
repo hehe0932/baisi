@@ -10,9 +10,7 @@
 
 @implementation LSPushGuideView
 
-+ (instancetype)guideView{
-    return [[[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
-}
+
 - (IBAction)close:(id)sender {
     [self removeFromSuperview];
 }
@@ -23,7 +21,7 @@
     
     if (![currentVersion isEqualToString:sanboxversion]) {
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        LSPushGuideView *guideView = [LSPushGuideView guideView];
+        LSPushGuideView *guideView = [LSPushGuideView viewFromXib];
         guideView.frame = window.bounds;
         [window addSubview:guideView];
         //存储版本号

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B1AE3F61E49AE6100EA4420 /* LSShowPictureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1AE3F41E49AE6100EA4420 /* LSShowPictureController.m */; };
 		4B1AE3F71E49AE6100EA4420 /* LSShowPictureController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B1AE3F51E49AE6100EA4420 /* LSShowPictureController.xib */; };
+		4B1C0B811F95D448007EADAE /* LSTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C0B801F95D448007EADAE /* LSTagButton.m */; };
 		4B263DEB1F7389820083A8EB /* LSCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B263DEA1F7389820083A8EB /* LSCommentHeaderView.m */; };
 		4B27F7451F7A3ED9002FD1BA /* LSPublicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B27F7411F7A3ED9002FD1BA /* LSPublicViewController.m */; };
 		4B27F7461F7A3ED9002FD1BA /* LSPublicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B27F7421F7A3ED9002FD1BA /* LSPublicViewController.xib */; };
@@ -22,6 +23,9 @@
 		4B58758B1E261E4E002D53DC /* LSNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875711E261E4E002D53DC /* LSNewViewController.m */; };
 		4B58758C1E261E4E002D53DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875761E261E4E002D53DC /* AppDelegate.m */; };
 		4B5875931E261E4E002D53DC /* LSTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5875861E261E4E002D53DC /* LSTrendsViewController.m */; };
+		4B5BBCA51F7B7CAE006BC7F2 /* LSAddTagToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5BBCA41F7B7CAE006BC7F2 /* LSAddTagToolBar.m */; };
+		4B5BBCA71F7B7CCD006BC7F2 /* LSAddTagToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5BBCA61F7B7CCD006BC7F2 /* LSAddTagToolBar.xib */; };
+		4B5BBCAA1F7B8A9C006BC7F2 /* LSAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5BBCA91F7B8A9C006BC7F2 /* LSAddTagViewController.m */; };
 		4B5D49031F6ACB1F00CC1E41 /* LSCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5D49011F6ACB1F00CC1E41 /* LSCommentViewController.m */; };
 		4B5D49041F6ACB1F00CC1E41 /* LSCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B5D49021F6ACB1F00CC1E41 /* LSCommentViewController.xib */; };
 		4B60E7621E387947007E66EF /* LSTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B60E7611E387947007E66EF /* LSTopicPictureView.m */; };
@@ -80,6 +84,8 @@
 		4B1AE3F31E49AE6100EA4420 /* LSShowPictureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSShowPictureController.h; sourceTree = "<group>"; };
 		4B1AE3F41E49AE6100EA4420 /* LSShowPictureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSShowPictureController.m; sourceTree = "<group>"; };
 		4B1AE3F51E49AE6100EA4420 /* LSShowPictureController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSShowPictureController.xib; sourceTree = "<group>"; };
+		4B1C0B7F1F95D448007EADAE /* LSTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTagButton.h; sourceTree = "<group>"; };
+		4B1C0B801F95D448007EADAE /* LSTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTagButton.m; sourceTree = "<group>"; };
 		4B263DE91F7389820083A8EB /* LSCommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSCommentHeaderView.h; sourceTree = "<group>"; };
 		4B263DEA1F7389820083A8EB /* LSCommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSCommentHeaderView.m; sourceTree = "<group>"; };
 		4B27F7401F7A3ED9002FD1BA /* LSPublicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSPublicViewController.h; sourceTree = "<group>"; };
@@ -105,6 +111,11 @@
 		4B58757C1E261E4E002D53DC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4B5875851E261E4E002D53DC /* LSTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSTrendsViewController.h; sourceTree = "<group>"; };
 		4B5875861E261E4E002D53DC /* LSTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSTrendsViewController.m; sourceTree = "<group>"; };
+		4B5BBCA31F7B7CAE006BC7F2 /* LSAddTagToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAddTagToolBar.h; sourceTree = "<group>"; };
+		4B5BBCA41F7B7CAE006BC7F2 /* LSAddTagToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAddTagToolBar.m; sourceTree = "<group>"; };
+		4B5BBCA61F7B7CCD006BC7F2 /* LSAddTagToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSAddTagToolBar.xib; sourceTree = "<group>"; };
+		4B5BBCA81F7B8A9C006BC7F2 /* LSAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAddTagViewController.h; sourceTree = "<group>"; };
+		4B5BBCA91F7B8A9C006BC7F2 /* LSAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAddTagViewController.m; sourceTree = "<group>"; };
 		4B5D49001F6ACB1F00CC1E41 /* LSCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSCommentViewController.h; sourceTree = "<group>"; };
 		4B5D49011F6ACB1F00CC1E41 /* LSCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSCommentViewController.m; sourceTree = "<group>"; };
 		4B5D49021F6ACB1F00CC1E41 /* LSCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSCommentViewController.xib; sourceTree = "<group>"; };
@@ -227,6 +238,8 @@
 				4B27F7421F7A3ED9002FD1BA /* LSPublicViewController.xib */,
 				4B27F7471F7A41AA002FD1BA /* LSPostWordViewController.h */,
 				4B27F7481F7A41AA002FD1BA /* LSPostWordViewController.m */,
+				4B5BBCA81F7B8A9C006BC7F2 /* LSAddTagViewController.h */,
+				4B5BBCA91F7B8A9C006BC7F2 /* LSAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +256,11 @@
 			children = (
 				4B6F84C61F7AA7BC00E37CDD /* LSPlacehoderTextView.h */,
 				4B6F84C71F7AA7BC00E37CDD /* LSPlacehoderTextView.m */,
+				4B5BBCA31F7B7CAE006BC7F2 /* LSAddTagToolBar.h */,
+				4B5BBCA41F7B7CAE006BC7F2 /* LSAddTagToolBar.m */,
+				4B5BBCA61F7B7CCD006BC7F2 /* LSAddTagToolBar.xib */,
+				4B1C0B7F1F95D448007EADAE /* LSTagButton.h */,
+				4B1C0B801F95D448007EADAE /* LSTagButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -636,6 +654,7 @@
 				4BFDD1171E276163005E016B /* LSReconmentCategoryCell.xib in Resources */,
 				4B6D09241E28C043005CCAB1 /* LSRecommentUserCell.xib in Resources */,
 				4B1AE3F71E49AE6100EA4420 /* LSShowPictureController.xib in Resources */,
+				4B5BBCA71F7B7CCD006BC7F2 /* LSAddTagToolBar.xib in Resources */,
 				4B27F7461F7A3ED9002FD1BA /* LSPublicViewController.xib in Resources */,
 				4BF6FF401F3B60ED00A7BE0B /* LSTopicVideoView.xib in Resources */,
 				4B2CA2D71E24BDF800F92116 /* Assets.xcassets in Resources */,
@@ -723,6 +742,7 @@
 				4B58758B1E261E4E002D53DC /* LSNewViewController.m in Sources */,
 				4BBF8B701E2DF43500ACE999 /* LSTextField.m in Sources */,
 				4BF753E81F79F4E300F53072 /* LSSquareButton.m in Sources */,
+				4B5BBCA51F7B7CAE006BC7F2 /* LSAddTagToolBar.m in Sources */,
 				4B81E5DD1E31DA6B004CC8B4 /* LSConst.m in Sources */,
 				4B27F7491F7A41AA002FD1BA /* LSPostWordViewController.m in Sources */,
 				4BE7B1381F79412600378A25 /* LSMeCell.m in Sources */,
@@ -750,6 +770,7 @@
 				4B76604F1E2C6E8A0011686A /* LSRecommentTagsViewController.m in Sources */,
 				4BBF8B731E2E107400ACE999 /* LSPushGuideView.m in Sources */,
 				4B6170F91E347B6000FFEC88 /* LSTopicViewController.m in Sources */,
+				4B5BBCAA1F7B8A9C006BC7F2 /* LSAddTagViewController.m in Sources */,
 				4B58758A1E261E4E002D53DC /* LSMeViewController.m in Sources */,
 				4BBF8B6A1E2DC5B900ACE999 /* LSVerticalButton.m in Sources */,
 				4B81E5E51E31FEC1004CC8B4 /* NSDate+LSExtension.m in Sources */,
@@ -759,6 +780,7 @@
 				4BE7B13B1F7950CD00378A25 /* LSMeFooterView.m in Sources */,
 				4B6D09271E28C34B005CCAB1 /* LSRecommentUser.m in Sources */,
 				4B58758C1E261E4E002D53DC /* AppDelegate.m in Sources */,
+				4B1C0B811F95D448007EADAE /* LSTagButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

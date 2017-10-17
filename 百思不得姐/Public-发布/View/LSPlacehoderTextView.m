@@ -14,8 +14,12 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        //垂直方向上永远有弹簧效果
+        self.alwaysBounceVertical = YES;
+        //默认字体
         self.font = [UIFont systemFontOfSize:15];
-        
+        //默认的占位文字颜色
+        self.placeholderColor = [UIColor grayColor];
         //监听文字改变
         [LSNoteCenter addObserver:self selector:@selector(textDidChange) name:UITextViewTextDidChangeNotification object:nil];
     }
@@ -27,12 +31,12 @@
 //    if (self.text.length || self.attributedText.length) return;
     if (self.hasText)return;
     //处理rect
-    rect.origin.x = 3;
+    rect.origin.x = 4;
     rect.origin.y = 8;
     rect.size.width -= 2 * rect.origin.x;
     NSMutableDictionary *attDic = [NSMutableDictionary dictionary];
     attDic[NSFontAttributeName] = self.font;
-    attDic[NSForegroundColorAttributeName] = [UIColor grayColor];
+    attDic[NSForegroundColorAttributeName] = self.placeholderColor;
     
     [self.placeholder drawInRect:rect withAttributes:attDic];
 }
@@ -44,4 +48,34 @@
 - (void)dealloc{
     [LSNoteCenter removeObserver:self];
 }
+
+#pragma mark - 重写setter
+- (void)setPlaceholder:(NSString *)placeholder{
+    _placeholder = [placeholder copy];
+    [self setNeedsDisplay];
+}
+- (void)setPlaceholderColor:(UIColor *)placeholderColor{
+    _placeholderColor = placeholderColor;
+    [self setNeedsDisplay];
+}
+
+- (void)setFont:(UIFont *)font{
+    [super setFont:font];
+    [self setNeedsDisplay];
+}
+
+- (void)setText:(NSString *)text{
+    [super setText:text];
+    [self setNeedsDisplay];
+}
+
+- (void)setAttributedText:(NSAttributedString *)attributedText{
+    [super setAttributedText:attributedText];
+    [self setNeedsDisplay];
+}
+
+/**
+ setNeedsDisplay:会在恰当的时刻自动调用drawRect:方法
+ setNeedsLayout: 会在恰当的时刻调用layoutSubviews 方法
+ */
 @end

@@ -36,3 +36,6 @@ UIKIT_EXTERN NSString * const LSTabBarDidSelectNotification;
 UIKIT_EXTERN NSString * const LSSelectControllerIndexKey;
 /** tabbar被点击的控制器的key */
 UIKIT_EXTERN NSString * const LSSelectControllerKey;
+
+/** 标签-间距*/
+UIKIT_EXTERN CGFloat const LSTagMargin;
